@@ -1,0 +1,27 @@
+class Main {
+    n : int32;
+
+    guessN() : unit {
+        print("n = ").printInt32(n).print(", guess is ");
+        if n < 0 
+        then 
+            print("n < 0")
+        else 
+            if 100 < n 
+            then 
+                print("n > 100")
+            else 
+                if n < 50 
+                then
+                    print("25 <= n < 50")
+                else 
+                    print("50 <= n <= 100");
+        print("\n");
+        ()
+    }
+
+    main() : int32 {
+        n <- 16; guessN();
+        0
+    }
+}
